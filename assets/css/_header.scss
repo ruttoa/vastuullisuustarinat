@@ -1,0 +1,103 @@
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap; // allow us to do the line break for collapsing content
+    align-items: center;
+    justify-content: space-between; // space out brand from logo
+    padding: 1rem;
+    // Because flex properties aren't inherited, we need to redeclare these first
+    // few properties so that content nested within behave properly.
+    > .container,
+    > .container-fluid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .svg-placeholder {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: #000;
+        border-radius: 50%;
+    }
+}
+.nav-toggler {
+    outline: none;
+    top: 1.25rem;
+    font: inherit;
+    display: inline-block;
+    overflow: visible;
+    margin: 0;
+    padding: 1rem;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: .2s;
+    transition-property: opacity,filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+}
+.nav-toggler.is-active .hamburger-box__inner {
+    transition-delay: .12s;
+    transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transform: rotate(45deg);
+}
+.hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+}
+.hamburger-box__inner {
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+}
+.hamburger-box__inner, 
+.hamburger-box__inner:after, 
+.hamburger-box__inner:before {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+    transition-duration: 75ms;
+    transition-property: transform;
+    background-color: #000;
+}
+.hamburger-box__inner:after, 
+.hamburger-box__inner:before {
+    display: block;
+    content: "";
+}
+.hamburger-box__inner:before {
+	top: -10px;
+    transition: top 75ms ease .12s,opacity 75ms ease;
+}
+.hamburger-box__inner:after {
+    bottom: -10px;
+    transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+}
+.nav-toggler.is-active .hamburger-box__inner:before {
+    top: 0;
+    transition: top 75ms ease,opacity 75ms ease .12s;
+    opacity: 0;
+}
+.nav-toggler.is-active .hamburger-box__inner:after {
+    bottom: 0;
+    transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+    transform: rotate(-90deg);
+}
+.nav-toggler:focus, 
+.nav-toggler:hover {
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: inherit;
+}

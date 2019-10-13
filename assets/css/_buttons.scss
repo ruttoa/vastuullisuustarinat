@@ -1,0 +1,38 @@
+// Based on Primitive CSS
+
+/* Buttons
+  =============== */
+.button, a.button, button, [type=submit], [type=reset], [type=button] {
+    -webkit-appearance: none;
+    display: inline-block;
+    border: 1px solid $brand-color;
+    border-radius: $border-radius;
+    background: $brand-color;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 1rem;
+    text-transform: none;
+    padding: .75rem 1.25rem;
+    margin: 0 0 .5rem 0;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    line-height: 1; 
+}
+.button:hover, a.button:hover, button:hover, [type=submit]:hover, [type=reset]:hover, [type=button]:hover {
+    border: 1px solid darken($color: $brand-color, $amount: 10);
+    background: darken($color: $brand-color, $amount: 10);
+    color: #ffffff;
+    text-decoration: none; 
+}
+.button:focus, .button:active, a.button:focus, a.button:active, button:focus, button:active, [type=submit]:focus, [type=submit]:active, [type=reset]:focus, [type=reset]:active, [type=button]:focus, [type=button]:active {
+    border: 1px solid darken($color: $brand-color, $amount: 15);
+    background: darken($color: $brand-color, $amount: 15);
+    color: #ffffff;
+    text-decoration: none; 
+}
+.button::-moz-focus-inner, a.button::-moz-focus-inner, button::-moz-focus-inner, [type=submit]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=button]::-moz-focus-inner {
+    border: 0;
+    padding: 0; 
+}
