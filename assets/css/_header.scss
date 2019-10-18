@@ -8,7 +8,7 @@
     flex-wrap: wrap; // allow us to do the line break for collapsing content
     align-items: center;
     justify-content: space-between; // space out brand from logo
-    padding: 1rem;
+    padding: 2rem 1rem 1rem;
     // Because flex properties aren't inherited, we need to redeclare these first
     // few properties so that content nested within behave properly.
     > .container,

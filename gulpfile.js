@@ -81,7 +81,7 @@ function watchForChanges() {
 
 	/** Watch for SASS */
 	watch([
-		"assets/css/style.scss"
+		"assets/css/*.scss"
 	], styles);
 
 };
