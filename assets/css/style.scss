@@ -124,26 +124,36 @@ section {
 }
 .photo-section {
     min-height: 100vh;
-    background: $blue;
+    background: transparent;
     color: #fff;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
     flex-direction: row;
     padding: 2rem 0 4rem;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
     .h2, .huge-text, .big-text {
         color: #fff;
     }
-    &-1 {
+    &-1 .bg {
         background-image: url('../assets/img/VastuullisuusTarinat_21.jpg');
     }
-    &-2 {
+    &-2 .bg {
         background-image: url('../assets/img/NM_Turku_telakka_7935_ORIGINAL.jpg');
     }
-    &-3 {
+    &-3 .bg {
         background-image: url('../assets/img/VastuullisuusTarinat_15.jpg');
     }
 }
