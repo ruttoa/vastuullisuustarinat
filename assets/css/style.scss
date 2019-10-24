@@ -21,7 +21,7 @@ body {
     color: #000;
     font-family: 'Quicksand', sans-serif;
     word-wrap: break-word;
-    letter-spacing: .025rem;
+    letter-spacing: .03em; // Tracking 30
 }
 a {
     color: $brand-color;
@@ -121,6 +121,7 @@ section {
 .subtitle {
     text-transform: uppercase;
     font-size: 1rem;
+    letter-spacing: 0.05em; // Tracking 50
 }
 .photo-section {
     min-height: 100vh;
@@ -149,6 +150,7 @@ section {
     }
     &-1 .bg {
         background-image: url('../assets/img/VastuullisuusTarinat_21.jpg');
+        background-position: center 30%;
     }
     &-2 .bg {
         background-image: url('../assets/img/NM_Turku_telakka_7935_ORIGINAL.jpg');
@@ -224,6 +226,12 @@ section {
         width: 90%;
         margin: 0 auto;
     }
+    .content-section-1 {
+        padding: 8rem 0;
+        h2 {
+            margin-bottom: 3rem;
+        }
+    }
 }
 
 @media (min-width: 1200px){
@@ -231,6 +239,9 @@ section {
         font-size: 18px;
     }
     h1, .huge-text {
-        font-size: 5rem;
+        font-size: 4.25rem;
+    }
+    .contact-section .container {
+        max-width: 1140px;
     }
 }
