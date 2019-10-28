@@ -8,7 +8,6 @@ $border-radius: 0px;
 @import 
     '_reboot', 
     '_grid',
-    '_buttons',
     '_header';
 
 html {
@@ -41,15 +40,15 @@ h1, h2, .huge-text, .big-text {
     color: $title-black;
 }
 h1, .huge-text {
-    font-size: 3rem;
+    font-size: 2.1rem;
     line-height: 1.15;
 }
 h2, .big-text {
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.15;
 }
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 h4 {
     font-size: 1.3rem;
@@ -98,7 +97,7 @@ section {
     }
 }
 .bg-gradient-blue {
-    background: linear-gradient(to bottom, rgba( $blue, 0 ) 0%,rgba( $blue, 0 ) 293px,rgba( $blue, 1 ) 293px,rgba( $blue, 1 ) 100%);
+    background: linear-gradient(to bottom, rgba( $blue, 0 ) 0%,rgba( $blue, 0 ) 130px,rgba( $blue, 1 ) 130px,rgba( $blue, 1 ) 100%);
     color: #fff;
 }
 .has-color-pink {
@@ -121,6 +120,7 @@ section {
     }
 }
 .page-header {
+    position: relative;
     display: flex;
     flex-wrap: wrap; // allow us to do the line break for collapsing content
     align-items: center;
@@ -128,14 +128,18 @@ section {
     min-height: 100vh;
     text-align: center;
     background: #fff;
+    > .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }
 .scroll-icon {
     position: absolute;
     display: block;
     bottom: 2rem;
     left: 50%;
-    width: 111px;
-    height: 111px;
+    width: 80px;
+    height: 80px;
     transform: translateX(-50%);
     transform-origin: center;
     &:before {
@@ -161,6 +165,7 @@ section {
         background-image: url('../assets/img/icon-mouse.svg');
         background-position: center;
         background-repeat: no-repeat;
+        background-size: 40% 40%;
     }
 }
 @keyframes zoom {
@@ -202,6 +207,9 @@ section {
         background-image: url('../assets/img/VastuullisuusTarinat_21.jpg');
         background-position: center 30%;
     }
+    &-2 > .container-fluid {
+        z-index: 1;
+    }
     &-2 .bg {
         background-image: url('../assets/img/NM_Turku_telakka_7935_ORIGINAL.jpg');
     }
@@ -220,14 +228,24 @@ section {
     z-index: 1;
     background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
+.has-fade-bottom:before {
+    content:"";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 100%);
+}
 .content-section {
-    padding: 6rem 0;
+    padding: 2rem 0;
 }
 .contact-section {
     font-size: .9rem;
 }
 .footer-logo {
-    float: right;
     margin: 2rem 0;
 }
 .site-footer {
@@ -241,7 +259,7 @@ section {
 /* Scroll indicator */
 .progress-container {
     width: 100%;
-    height: 14px;
+    height: 7px;
     background: $pink;
     position: fixed;
     top: 0;
@@ -249,7 +267,7 @@ section {
     display: block;
     z-index: 11;
     .progress-bar {
-        height: 14px;
+        height: 7px;
         background: $blue;
         width: 0%;
         display: block;
@@ -258,9 +276,48 @@ section {
 
 
 
-@media (min-width: 576px){}
+@media (min-width: 576px){
+    h1, .huge-text {
+        font-size: 3rem;
+    }
+    h2, .big-text {
+        font-size: 2.2rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    .bg-gradient-blue {
+        background: linear-gradient(to bottom, rgba( $blue, 0 ) 0%,rgba( $blue, 0 ) 293px,rgba( $blue, 1 ) 293px,rgba( $blue, 1 ) 100%);
+    }
+    .content-section {
+        padding: 4rem 0;
+    }
+}
 
-@media (min-width: 768px){}
+@media (min-width: 768px){
+    .progress-container,
+    .progress-bar {
+        height: 14px;
+    }
+    .scroll-icon {
+        width: 90px;
+        height: 90px;
+    }
+    .content-section {
+        padding: 6rem 0;
+        &-6 {
+            padding-bottom: 8rem;
+        }
+    }
+    .bg-gradient-blue {
+        background: linear-gradient(to bottom, rgba( $blue, 0 ) 0%,rgba( $blue, 0 ) 260px,rgba( $blue, 1 ) 260px,rgba( $blue, 1 ) 100%);
+    }
+    .footer-logo {
+        position: absolute;
+        bottom: 0;
+        right: 3rem;
+    }
+}
 
 @media (min-width: 992px){
     html {
@@ -271,6 +328,13 @@ section {
     }
     h2, .big-text {
         font-size: 3rem;
+    }
+    .scroll-icon {
+        width: 111px;
+        height: 111px;
+        &:after {
+            background-size: auto;
+        }
     }
     .photo-section .container-fluid {
         width: 90%;
@@ -293,5 +357,8 @@ section {
     }
     .contact-section .container {
         max-width: 1140px;
+    }
+    .bg-gradient-blue {
+        background: linear-gradient(to bottom, rgba( $blue, 0 ) 0%,rgba( $blue, 0 ) 293px,rgba( $blue, 1 ) 293px,rgba( $blue, 1 ) 100%);
     }
 }

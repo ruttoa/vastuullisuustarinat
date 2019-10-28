@@ -8,7 +8,7 @@
     flex-wrap: wrap; // allow us to do the line break for collapsing content
     align-items: center;
     justify-content: space-between; // space out brand from logo
-    padding: 2rem 1rem 1rem;
+    padding: 2rem 0 1rem;
     // Because flex properties aren't inherited, we need to redeclare these first
     // few properties so that content nested within behave properly.
     > .container,
@@ -24,6 +24,9 @@
         height: 35px;
         background: #000;
         border-radius: 50%;
+    }
+    .brand {
+        max-width: 65%;
     }
 }
 .nav-toggler {
@@ -100,4 +103,12 @@
     border: 0;
     outline: none;
     color: inherit;
+}
+
+
+@media (min-width: 576px){
+    .site-header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
