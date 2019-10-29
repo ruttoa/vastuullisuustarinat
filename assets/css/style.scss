@@ -107,12 +107,13 @@ section {
     text-align: center;
 }
 .nav-item {
-    text-transform: uppercase;
     font-size: .9rem;
     padding: .5rem 1rem;
     letter-spacing: 0.05em;
     border-radius: 100px;
     border: solid 2px $blue;
+    font-family: 'DM Serif Display', serif;
+    font-weight: bold;
     &:hover {
         text-decoration: none;
         background: $blue;
@@ -138,8 +139,8 @@ section {
     display: block;
     bottom: 2rem;
     left: 50%;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     transform: translateX(-50%);
     transform-origin: center;
     &:before {
@@ -153,7 +154,7 @@ section {
         animation-name: zoom;
         animation-timing-function: ease-in-out;
         animation-duration: 2s;
-        animation-iteration-count: 5;
+        animation-iteration-count: 10;
     }
     &:after {
         content:"";
@@ -244,6 +245,13 @@ section {
 }
 .contact-section {
     font-size: .9rem;
+    .profile-header {
+        min-height: 100px;
+    }
+    .col-6:nth-child(3) .profile-header,
+    .col-6:nth-child(4) .profile-header {
+        min-height: 80px;
+    }
 }
 .footer-logo {
     margin: 2rem 0;
@@ -292,16 +300,25 @@ section {
     .content-section {
         padding: 4rem 0;
     }
+    .contact-section {
+        .profile-header {
+            min-height: 60px;
+        }
+        .col-6:nth-child(3) .profile-header,
+        .col-6:nth-child(4) .profile-header {
+            min-height: 95px;
+        }
+    }
 }
 
 @media (min-width: 768px){
     .progress-container,
-    .progress-bar {
+    .progress-container .progress-bar {
         height: 14px;
     }
     .scroll-icon {
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
     }
     .content-section {
         padding: 6rem 0;
@@ -317,6 +334,13 @@ section {
         bottom: 0;
         right: 3rem;
     }
+    .contact-section {
+        .profile-header,
+        .col-6:nth-child(3) .profile-header,
+        .col-6:nth-child(4) .profile-header {
+            min-height: 118px;
+        }
+    }
 }
 
 @media (min-width: 992px){
@@ -330,11 +354,8 @@ section {
         font-size: 3rem;
     }
     .scroll-icon {
-        width: 111px;
-        height: 111px;
-        &:after {
-            background-size: auto;
-        }
+        width: 80px;
+        height: 80px;
     }
     .photo-section .container-fluid {
         width: 90%;
@@ -344,6 +365,13 @@ section {
         padding: 8rem 0;
         h2 {
             margin-bottom: 3rem;
+        }
+    }
+    .contact-section {
+        .profile-header,
+        .col-6:nth-child(3) .profile-header,
+        .col-6:nth-child(4) .profile-header {
+            min-height: 135px;
         }
     }
 }
@@ -360,5 +388,12 @@ section {
     }
     .bg-gradient-blue {
         background: linear-gradient(to bottom, rgba( $blue, 0 ) 0%,rgba( $blue, 0 ) 293px,rgba( $blue, 1 ) 293px,rgba( $blue, 1 ) 100%);
+    }
+    .contact-section {
+        .profile-header,
+        .col-6:nth-child(3) .profile-header,
+        .col-6:nth-child(4) .profile-header {
+            min-height: 108px;
+        }
     }
 }
