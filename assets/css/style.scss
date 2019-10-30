@@ -245,15 +245,24 @@ section {
 }
 .content-section {
     padding: 2rem 0;
+    &.content-section-3 {
+        padding-top: 0;
+    }
 }
 .contact-section {
-    font-size: .9rem;
+    font-size: .8rem;
     .profile-header {
-        min-height: 100px;
+        min-height: 66px;
     }
     .col-6:nth-child(3) .profile-header,
     .col-6:nth-child(4) .profile-header {
-        min-height: 80px;
+        min-height: 76px;
+    }
+    .subtitle {
+        font-size: .8rem;
+    }
+    p:not(.subtitle) {
+        hyphens: auto;
     }
 }
 .footer-logo {
@@ -315,12 +324,10 @@ section {
         padding: 4rem 0;
     }
     .contact-section {
-        .profile-header {
-            min-height: 60px;
-        }
+        .profile-header,
         .col-6:nth-child(3) .profile-header,
         .col-6:nth-child(4) .profile-header {
-            min-height: 95px;
+            min-height: 55px;
         }
     }
 }
@@ -353,7 +360,10 @@ section {
         .profile-header,
         .col-6:nth-child(3) .profile-header,
         .col-6:nth-child(4) .profile-header {
-            min-height: 118px;
+            min-height: 90px;
+        }
+        p:not(.subtitle) {
+            hyphens: none;
         }
     }
 }
@@ -386,7 +396,7 @@ section {
         .profile-header,
         .col-6:nth-child(3) .profile-header,
         .col-6:nth-child(4) .profile-header {
-            min-height: 135px;
+            min-height: 122px;
         }
     }
 }
@@ -408,7 +418,7 @@ section {
         .profile-header,
         .col-6:nth-child(3) .profile-header,
         .col-6:nth-child(4) .profile-header {
-            min-height: 108px;
+            min-height: 101px;
         }
     }
 }
