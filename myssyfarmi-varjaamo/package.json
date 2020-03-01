@@ -1,0 +1,35 @@
+{
+  "name": "static-site-base",
+  "description": "Skeletor",
+  "license": "MIT",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "author": "Janne Rättyä",
+  "contributors": [
+    {
+      "name": "Janne Rättyä",
+      "url": "https://github.com/ruttoa"
+    }
+  ],
+  "scripts": {},
+  "dependencies": {
+    "npm": "^6.3.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^3.0.0",
+    "fancy-log": "^1.3.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.3.4",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0"
+  },
+  "engines": {
+    "node": "^10"
+  }
+}
