@@ -207,19 +207,8 @@ section {
     .h2, .huge-text, .big-text {
         color: #fff;
     }
-    &-1 .bg {
-        background-image: url('../assets/img/VastuullisuusTarinat_21.jpg');
-        background-position: center 30%;
-    }
     &-2 > .container-fluid {
         z-index: 1;
-    }
-    &-2 .bg {
-        background-image: url('../assets/img/NM_Turku_telakka_7935_ORIGINAL.jpg');
-        background-position: 75% center;
-    }
-    &-3 .bg {
-        background-image: url('../assets/img/VastuullisuusTarinat_15.jpg');
     }
 }
 .has-fade-top:after {
