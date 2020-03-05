@@ -103,6 +103,15 @@ section {
 .has-color-pink {
     color: $pink!important;
 }
+.has-drop-cap:not(:focus):first-letter {
+    float: left;
+    font-size: 3rem;
+    line-height: .68;
+    font-weight: 300;
+    margin: 0.5rem .5rem 0 0;
+    text-transform: uppercase;
+    font-style: normal;
+}
 .text-center {
     text-align: center;
 }
@@ -410,5 +419,9 @@ section {
         .col-6:nth-child(4) .profile-header {
             min-height: 101px;
         }
+    }
+    .has-drop-cap:not(:focus):first-letter {
+        font-size: 3.6em;
+        margin: .6rem .5rem 0 0;
     }
 }
