@@ -18,6 +18,16 @@ figure {
         font-size: .8rem;
         margin-top: 1rem;
     }
+    &.alignfull {
+        width: 100vw;
+        margin-left: calc((100% - 100vw) / 2);
+        text-align: center;
+        img {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+    }
 }
 .spacer {
     display: block;
@@ -68,6 +78,10 @@ figure {
 .slider-section {
     padding: 0;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: visible;
+    scroll-snap-coordinate: 0% 0%; /* older (Firefox/IE) */  
+    -webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */  
 }
 
 .footer-logo {
