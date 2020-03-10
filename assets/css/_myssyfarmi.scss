@@ -153,3 +153,10 @@ figure {
         }
     }
 }
+
+@media (orientation: landscape) and (max-width: 767px) {
+    &.site-myssyfarmi-lampaat .page-header.video-section .bg video {
+        top: 80%;
+        transform: translateX(calc((100% - 100vw) / 2)) translateY(-50%);
+    }
+}
