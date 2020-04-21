@@ -78,11 +78,6 @@ figure {
 }
 .slider-section {
     padding: 0;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    overflow: visible;
-    scroll-snap-coordinate: 0% 0%; /* older (Firefox/IE) */  
-    -webkit-scroll-snap-coordinate: 0% 0%; /* older (Safari) */  
 }
 
 .footer-logo {
