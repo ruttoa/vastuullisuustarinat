@@ -53,6 +53,26 @@ figure {
         padding-bottom: 100px;
         width: 100%;
     }
+    &.content-section {
+        position: relative;
+        display: block;
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .container-absolute {
+            position: absolute;
+            bottom: 0;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            .scroll-icon {
+                bottom: -2rem;
+            }
+        }
+    }
 }
 .video-section .bg {
     video {
@@ -107,6 +127,14 @@ figure {
 @media (min-width: 576px){
     blockquote {
         font-size: 2rem;
+    }
+    .page-header.content-section {
+        .container-absolute {
+            padding-bottom: 17%;
+            .scroll-icon {
+                bottom: 2rem;
+            }
+        }
     }
 }
 

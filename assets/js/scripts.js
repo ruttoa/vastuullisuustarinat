@@ -38,7 +38,15 @@ var mySwiper = new Swiper('.swiper-container', {
     mousewheelReleaseOnEdges: true,
     touchReleaseOnEdges: true,
     lazy: true,
+    on: {
+        init: function () {
+            //console.log('swiper initialized');
+            //rellax.refresh();
+        },
+    },
 });
 
-// Initialize Lazyload plugin
-lazyload();
+imagesLoaded(document.querySelectorAll('.entry-content'), function () {
+    //console.log('all images are loaded');
+    rellax.refresh(); // Recalculate Rellax after images are loaded
+});
