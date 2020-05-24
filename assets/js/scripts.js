@@ -12,10 +12,10 @@ var rellax = new Rellax('.photo-section .bg', {
 
 // Reading progress bar
 window.onscroll = function () {
-    myFunction();
+    progressBar();
 }
 
-function myFunction() {
+function progressBar() {
     var progressBar = document.getElementById("progress-bar");
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -24,7 +24,7 @@ function myFunction() {
 }
 
 // Swiping slider
-var mySwiper = new Swiper('.swiper-container', {
+/*var mySwiper = new Swiper('.swiper-container', {
     cssMode: true,
     direction: 'vertical',
     loop: false,
@@ -44,9 +44,9 @@ var mySwiper = new Swiper('.swiper-container', {
             //rellax.refresh();
         },
     },
-});
+});*/
 
 imagesLoaded(document.querySelectorAll('.entry-content'), function () {
     //console.log('all images are loaded');
-    rellax.refresh(); // Recalculate Rellax after images are loaded
+    rellax.refresh(); // Recalculate Rellax after images are loaded, fixes buggy layout
 });
