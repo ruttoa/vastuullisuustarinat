@@ -177,8 +177,11 @@ figure {
         .video-section .bg video {
             transform: translateX(calc((75% - 100vw) / 2));
         }
-        .slider-section-1 .swiper-slide-1 {
+        .photo-section-1 .bg {
             background-position: 73% center;
+        }
+        .photo-section-4 .bg {
+            background-position: 60% center;
         }
     }
 }

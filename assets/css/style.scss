@@ -211,6 +211,9 @@ section {
     text-align: center;
     position: relative;
     overflow: hidden;
+    .container {
+        z-index: 1;
+    }
     .bg {
         position: absolute;
         top: 0;
