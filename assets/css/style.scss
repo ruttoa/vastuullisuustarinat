@@ -465,3 +465,35 @@ section {
 .site-myssyfarmi {
     @import '_myssyfarmi';
 }
+
+.site-sk-demo {
+    .site-header {
+        position: fixed;
+        transition: all 300ms ease;
+        z-index: 10;
+        &.scroll {
+            background-color: #862730;
+            .brand {
+                padding-top: 1rem;
+                padding-bottom: 0;
+                max-width: 330px;
+            }
+        }
+        .brand {
+            max-width: 330px;
+            transition: all 300ms ease;
+            @media (min-width: 768px) {
+                max-width: 430px;
+            }
+        }
+    }
+    .progress-container {
+        background-color: #862730;
+        .progress-bar {
+            background-color: #125d8a;
+        }
+    }
+    .scroll-icon:before {
+        background-color: #125d8a;
+    }
+}

@@ -13,6 +13,10 @@ var rellax = new Rellax('.photo-section .bg', {
 // Reading progress bar
 window.onscroll = function () {
     progressBar();
+    change_header_class_on_scroll();
+}
+window.onload = function () {
+    change_header_class_on_scroll();
 }
 
 function progressBar() {
@@ -50,3 +54,15 @@ imagesLoaded(document.querySelectorAll('.entry-content'), function () {
     //console.log('all images are loaded');
     rellax.refresh(); // Recalculate Rellax after images are loaded, fixes buggy layout
 });
+
+function change_header_class_on_scroll() {
+    var scrollpos = window.scrollY,
+        header = document.querySelector(".site-sk-demo .site-header"),
+        header_height = header.offsetHeight;
+
+    if (scrollpos >= header_height) {
+        header.classList.add("scroll");
+    } else {
+        header.classList.remove("scroll")
+    }
+}
